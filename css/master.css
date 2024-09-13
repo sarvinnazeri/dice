@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* npx tailwindcss -i ./src/css/master.css -o ./src/css/output.css --watch */
+
+
+@keyframes ax {
+    50% {
+        transform: rotate3d(1, 1, 1, 228deg);
+    }
+
+    80% {
+        transform: rotate3d(1, 1, 1, 228deg);
+    }
+
+    100% {}
+}
+
+.ax {
+    animation: ax 4s alternate;
+}
+
+.dice_1 {
+
+    display: flex;
+    width: fit-content;
+    transform-style: preserve-3d;
+    transform: perspective(900px) rotate3d(1, 1, 1, 400deg) translatey(40px) translatex(-10px);
+    transform-origin: 65% 50%;
+    height: 50px;
+    transition: 1s;
+
+    >figure {
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+
+        &:nth-of-type(1) {
+            transform-origin: right;
+            transform: translatex(90px) rotatey(90deg);
+        }
+
+        &:nth-of-type(2) {
+            transform: translatex(60px) translatez(30px);
+        }
+
+        &:nth-of-type(3) {
+            transform-origin: right;
+            transform: rotatey(90deg);
+        }
+
+        &:nth-of-type(4) {}
+
+        &:nth-of-type(5) {
+            transform: translatex(-30px) rotatex(-90deg);
+            transform-origin: bottom;
+        }
+
+        &:nth-of-type(6) {
+            transform: translate(-60px) rotatex(90deg);
+            transform-origin: top;
+
+        }
+
+        >img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@font-face {
+    font-family: grotesk;
+    src: url(../font/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/master.css">
+    <title>Document</title>
+</head>
+
+<body class="overflow-hidden h-[100vh] bg-first-bg bg-cover justify-center items-end flex flex-wrap font-grotesk">
+    <!-- Start game form -->
+    <div class="bg-white w-[90%] h-[60%] flex justify-center container content-center" id="StartGameParent">
+        <div id="startGameForm" class="border *:border w-full flex flex-wrap">
+            <div class="w-[50%] justify-center flex items-center ">
+                <input type="text" placeholder="First user name" id="firstUserNameInput"
+                    class="border  w-[80%] md:w-[300px] h-[40px] ps-3" />
+
+            </div>
+            <div class="w-[50%] justify-center flex items-center ">
+                <input type="text" placeholder="Second user name" id="secondUserNameInput"
+                    class="border  w-[80%] md:w-[300px] h-[40px] ps-3" />
+            </div>
+            <div class=" justify-center items-center flex  w-full">
+                <button id="startGame"
+                    class="border w-[80%] h-[40px] bg-orange-500 hover:bg-orange-300 hover:text-white">Start
+                    Game</button>
+            </div>
+        </div>
+
+    </div>
+    <footer
+        class="w-full h-[150px] bg-[#6b6b6be4] *:text-white justify-center flex items-center text-center capitalize px-5 "
+        id="footer">
+        <p>© Copyright 2012 - 2024 |
+            java script game
+            by
+            <a href="https://github.com/Elinazmokhtari" class="text-orange-500"> Elnaz Mokhtari
+            </a>
+            &
+            <a href="https://github.com/sarvinnazeri" class="text-orange-500"> sarvin nazeri
+            </a>
+            All Rights Reserved | Powered by
+            <a href="https://tailwindcss.com/" class="text-orange-500">tailwind</a>
+        </p>
+    </footer>
+
+
+    <!-- Game Section -->
+    <div id="game" style="display: none"
+        class="bg-white w-[90%] h-[95%] md:h-[60%] flex justify-center container content-center flex-wrap">
+        <!-- User 1 Section -->
+        <div id="firstUser"
+            class=" md:h-[100%] md:mb-0 mb-2  content-center *:justify-center justify-center *:my-5  *:flex  mx-0 w-[50%] md:w-[40%] flex flex-wrap">
+            <h3 class="text-[#bdbaba] text-[50px] w-full h-fit">User1:</h3>
+            <p class="text-orange-300 text-[30px] w-full h-fit">Score: 0</p>
+            <button id="btn1"
+                class="border w-[200px] bg-[#d35211e5] flex text-white justify-center items-center h-[50px]">Role
+                Dice</button>
+        </div>
+        <!-- <hr /> -->
+        <!-- Dice Section -->
+        <div
+            class="w-[100%] md:h-[100%] md:w-[20%] justify-center content-center items-center flex flex-wrap border md:pb-0 pb-10">
+            <h1 id="dice"
+                class="flex text-center text-[16px] md:text-[30px] border w-full justify-center  border-orange-400 items-center">
+            </h1>
+
+
+            <div class="dice_1 " id="ax" style="display:none">
+                <figure><img src="img/1.gif" alt=""></figure>
+                <figure><img src="img/2.gif" alt=""></figure>
+                <figure><img src="img/3.jpeg" alt=""></figure>
+                <figure><img src="img/4.png" alt=""></figure>
+                <figure><img src="img/5.gif" alt=""></figure>
+                <figure><img src="img/6.png" alt=""></figure>
+            </div>
+
+
+        </div>
+        <!-- <hr /> -->
+        <!-- User 2 Section -->
+        <div id="secondUser"
+            class=" content-center *:justify-center justify-center *:my-5  *:flex  w-[50%] md:w-[40%] flex flex-wrap">
+            <h3 class="text-[#bdbaba] text-[50px] w-full h-fit">User2:</h3>
+            <p class="text-orange-300 text-[30px] w-full h-fit">Score: 0</p>
+            <button disabled id="btn2"
+                class="border  w-[200px] bg-[#d35211e5] flex text-white justify-center items-center h-[50px]">Role
+                Dice</button>
+        </div>
+    </div>
+
+
+
+    <script src="js/App.js"></script>
+</body>
+
+</html>
